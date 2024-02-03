@@ -1,0 +1,13 @@
+version: "3"
+services:
+    db:
+        image: mysql:latest
+        restart: always
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: true
+            MYSQL_DATABASE: blog
+            MYSQL_RANDOM_ROOT_PASSWORD: false
+        ports:
+            - "3306:3306"
+        volumes:
+            - /var/lib/mysql
