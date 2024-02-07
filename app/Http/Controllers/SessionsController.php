@@ -33,7 +33,7 @@ class SessionsController extends Controller
 
     public function destroy()
     {
-        session()->regenerate();
+        auth()->logout();
 
         return redirect('/')->with('success', 'Goodbye!');
     }
